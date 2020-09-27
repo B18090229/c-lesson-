@@ -1,0 +1,28 @@
+定义一个抽象类shape，用于代表几何图形，设置计算几何图形体积的外部接口；由shape类派生出圆柱类cylinder、球sphere；圆柱体类型有私有数据成员半径r，高h；球类有私有数据成员半径r；结合抽象类的指针或引用，实现就算几何图形体积。纯虚函数定义：double volume（）=0；
+ (6)main()已给出，请直接复制使用 
+
+int main() {
+   shape *p;
+   double  r,h;
+   cout<<"input r & h："<<endl;
+   cin>>r>>h;
+   cylinder cy(r,h);
+   sphere sp(r);
+   p=&cy;
+   cout<<p-> volume()<<endl;    		
+   p=&sp;
+   cout<<p-> volume()<<endl; 
+   return 0;
+}
+输入描述
+无
+
+输出描述
+无
+
+样例输入1:
+input r & h：
+2 5
+样例输出1:
+62.83
+33.5093
